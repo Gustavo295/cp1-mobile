@@ -5,13 +5,15 @@ import AumentoProduto from './components/AumentoProduto';
 import Style from './components/Style';
 
 export default function App() {
-  const nome = [nome, setNome] = useState(0)
+  const [nome, setNome] = useState(0)
   return (
     <View style={Style.container}>
+      <StatusBar style="auto" />
       <TextInput
         placeholder='Nome do Produto'
         style={Style.textInput}
-        onChange={nome}
+        onChange={setNome}
+        value={nome}
       ></TextInput>
       <TextInput
         placeholder='Valor do Produto'
@@ -24,11 +26,8 @@ export default function App() {
         keyboardType='decimal-pad'
       ></TextInput>
       <Button
-        title='Calcular'
-        onPress={() => { }}
-      />
-      <StatusBar style="auto" />
-      <AumentoProduto />
+        title="Calcular"
+        onPress={<AumentoProduto />} />
     </View>
   );
 };
