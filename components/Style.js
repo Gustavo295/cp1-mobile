@@ -15,5 +15,9 @@ export default StyleSheet.create({
         borderColor: '#000',
         borderRadius: 10,
         fontSize: 20,
+    },
+    resultado: {
+        fontSize: 30,
+        width: 200
     }
 })
